@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="PDFModifier">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/PDFModifier_jar/PDFModifier.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
