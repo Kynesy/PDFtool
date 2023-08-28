@@ -10,7 +10,7 @@ import java.awt.event.ActionListener;
 
 public class MyListener implements ActionListener {
     public enum ActionCMD {SHOW_EXTRACT, SHOW_MERGE, SHOW_HOME}
-    private MainFrame mainFrame;
+    private final MainFrame mainFrame;
 
     public MyListener(MainFrame mainFrame) {
         this.mainFrame = mainFrame;
@@ -22,15 +22,15 @@ public class MyListener implements ActionListener {
         System.out.println("Command: " + cmd);
         switch (cmd) {
 
-            case SHOW_MERGE -> {
+            case SHOW_MERGE: {
                 mainFrame.setPanel(new MergePanel(this));
                 break;
             }
-            case SHOW_EXTRACT -> {
+            case SHOW_EXTRACT: {
                 mainFrame.setPanel(new ExtractPanel(this));
                 break;
             }
-            case SHOW_HOME -> {
+            case SHOW_HOME: {
                 mainFrame.setPanel(new ToolSelectionPanel(this));
                 break;
             }

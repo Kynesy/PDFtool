@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class pdfModifier_Apache implements I_pdfModifier{
-    private final String pathToSave = System.getProperty("user.home") + "\\Downloads\\";
+    private final String pathToSave = System.getProperty("user.home") + "/Downloads/";
 
     private int mergeList(List<File> fileList){
         PDFMergerUtility PDFmerger = new PDFMergerUtility();
@@ -53,6 +53,7 @@ public class pdfModifier_Apache implements I_pdfModifier{
                 PDDocument pd = iterator.next();
                 String tmpFilename = pathToSave + "sample"+ i++ +".pdf";
                 pd.save(tmpFilename);
+                pd.close();
                 filesToMerge.add(new File(tmpFilename));
             }
             System.out.println("Multiple PDF’s created");
